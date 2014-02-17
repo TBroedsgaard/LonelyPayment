@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using LonelyPayment.UserControls;
-
-namespace LonelyPayment
+namespace LonelyPayment.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SalesUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SalesUserControl : UserControl
     {
-        public MainWindow()
+        public SalesUserControl()
         {
             InitializeComponent();
-
-            salesUserControl.Content = new SalesUserControl();
         }
     }
 }
