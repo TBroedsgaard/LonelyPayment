@@ -3,7 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TabControl x:Name="mainTabNavigation" TabStripPlacement="Left" HorizontalContentAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left">
+            <Image Source="/Images/lonelytreelogo.jpg" Height="80" Margin="10 10 0 0"/>
+        </StackPanel>
+            <TabControl x:Name="mainTabNavigation" TabStripPlacement="Left" HorizontalContentAlignment="Left" Grid.Row="1">
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
