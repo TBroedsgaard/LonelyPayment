@@ -53,8 +53,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\BookingsUserControl.xaml.cs">
+      <DependentUpon>BookingsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustomersUserControl.xaml.cs">
+      <DependentUpon>CustomersUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PaymentsUserControl.xaml.cs">
+      <DependentUpon>PaymentsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SalesMasterUserControl.xaml.cs">
+      <DependentUpon>SalesMasterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SalesServantUserControl.xaml.cs">
+      <DependentUpon>SalesServantUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SalesUserControl.xaml.cs">
       <DependentUpon>SalesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SuppliersUserControl.xaml.cs">
+      <DependentUpon>SuppliersUserControl.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -68,7 +86,31 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\BookingsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CustomersUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PaymentsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SalesMasterUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SalesServantUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\SalesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SuppliersUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\user_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\date.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

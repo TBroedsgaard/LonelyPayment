@@ -26,7 +26,11 @@ namespace LonelyPayment
         {
             InitializeComponent();
 
+            customersUserControl.Content = new CustomersUserControl();
+            suppliersUserControl.Content = new SuppliersUserControl();
             salesUserControl.Content = new SalesUserControl();
+            bookingsUserControl.Content = new BookingsUserControl();
+            paymentsUserControl.Content = new PaymentsUserControl();
         }
     }
 }

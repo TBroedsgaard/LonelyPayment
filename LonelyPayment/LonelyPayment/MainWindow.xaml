@@ -3,25 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TabControl TabStripPlacement="Left">
-            <TabItem>
-                <TabItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Images/money.png" Height="16"/>
-                        <Label Content="Payments"/>
-                    </StackPanel>
-                </TabItem.Header>
-                    <UserControl x:Name="paymentsUserControl"/>
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Images/basket.png" Height="16"/>
-                        <Label Content="Sales"/>
-                    </StackPanel>
-                </TabItem.Header>
-                    <UserControl x:Name="salesUserControl"/>
-            </TabItem>
+        <TabControl x:Name="mainTabNavigation" TabStripPlacement="Left" HorizontalContentAlignment="Left">
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
@@ -29,6 +11,7 @@
                         <Label Content="Customers"/>
                     </StackPanel>
                 </TabItem.Header>
+                <UserControl x:Name="customersUserControl"/>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
@@ -37,6 +20,34 @@
                         <Label Content="Suppliers"/>
                     </StackPanel>
                 </TabItem.Header>
+                <UserControl x:Name="suppliersUserControl"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/basket.png" Height="16"/>
+                        <Label Content="Sales"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <UserControl x:Name="salesUserControl"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/date.png" Height="16"/>
+                        <Label Content="Bookings"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <UserControl x:Name="bookingsUserControl"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/money.png" Height="16"/>
+                        <Label Content="Payments"/>
+                    </StackPanel>
+                </TabItem.Header>
+                    <UserControl x:Name="paymentsUserControl"/>
             </TabItem>
         </TabControl>
 

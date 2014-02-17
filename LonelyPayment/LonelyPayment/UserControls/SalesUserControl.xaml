@@ -7,32 +7,16 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="100" Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition />
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <ListView Grid.Column="0"/>
-            <StackPanel Grid.Column="1">
-                <Button>
-                    <Image Source="/Images/add.png" />
-                </Button>
-                <Button>
-                    <Image Source="/Images/delete.png" />
-                </Button>
-            </StackPanel>
-        </Grid>
+        <UserControl x:Name="salesMasterUserControl" Grid.Row="0"/>
         <GridSplitter Grid.Row="1"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Center"
               Height="5"
         />
-        <StackPanel Grid.Row="2">
-            <Label Content="This is the details area"/>
-        </StackPanel>
+        <UserControl x:Name="salesServantUserControl" Grid.Row="2"/>
     </Grid>
 </UserControl>

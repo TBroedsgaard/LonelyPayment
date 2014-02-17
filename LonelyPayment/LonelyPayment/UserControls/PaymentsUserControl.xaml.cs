@@ -16,21 +16,14 @@ using System.Windows.Shapes;
 namespace LonelyPayment.UserControls
 {
     /// <summary>
-    /// Interaction logic for SalesUserControl.xaml
+    /// Interaction logic for PaymentsUserControl.xaml
     /// </summary>
-    public partial class SalesUserControl : UserControl
+    public partial class PaymentsUserControl : UserControl
     {
-        public SalesUserControl()
+        public PaymentsUserControl()
         {
             InitializeComponent();
-
-            salesMasterUserControl.Content = new SalesMasterUserControl();
-
-            salesServantUserControl.Content = new SalesServantUserControl();
-
-
-
-
+            // http://www.wpf-tutorial.com/listview-control/listview-grouping/
         }
     }
 }

@@ -16,21 +16,21 @@ using System.Windows.Shapes;
 namespace LonelyPayment.UserControls
 {
     /// <summary>
-    /// Interaction logic for SalesUserControl.xaml
+    /// Interaction logic for SalesMasterUserControl.xaml
     /// </summary>
-    public partial class SalesUserControl : UserControl
+    public partial class SalesMasterUserControl : UserControl
     {
-        public SalesUserControl()
+        public SalesMasterUserControl()
         {
             InitializeComponent();
 
-            salesMasterUserControl.Content = new SalesMasterUserControl();
+            var sale = new { 
+                Started = DateTime.Now.ToShortDateString(), 
+                Customer = "John", 
+                Status = "Active" 
+            };
 
-            salesServantUserControl.Content = new SalesServantUserControl();
-
-
-
-
+            salesListView.Items.Add(sale);
         }
     }
 }
