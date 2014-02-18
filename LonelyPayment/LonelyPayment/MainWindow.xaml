@@ -14,20 +14,11 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Images/user.png" Height="16"/>
-                        <Label Content="Customers"/>
+                        <Image Source="/Images/calendar.png" Height="16"/>
+                        <Label Content="Status" />
                     </StackPanel>
                 </TabItem.Header>
-                <UserControl x:Name="customersUserControl"/>
-            </TabItem>
-            <TabItem>
-                <TabItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Images/user_red.png" Height="16"/>
-                        <Label Content="Suppliers"/>
-                    </StackPanel>
-                </TabItem.Header>
-                <UserControl x:Name="suppliersUserControl"/>
+                <UserControl x:Name="statusUserControl"/>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
@@ -41,20 +32,20 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Images/date.png" Height="16"/>
-                        <Label Content="Bookings"/>
+                        <Image Source="/Images/user_red.png" Height="16"/>
+                        <Label Content="Customers"/>
                     </StackPanel>
                 </TabItem.Header>
-                <UserControl x:Name="bookingsUserControl"/>
+                <UserControl x:Name="customersUserControl"/>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Images/money.png" Height="16"/>
-                        <Label Content="Payments"/>
+                        <Image Source="/Images/user_suit.png" Height="16"/>
+                        <Label Content="Suppliers"/>
                     </StackPanel>
                 </TabItem.Header>
-                    <UserControl x:Name="paymentsUserControl"/>
+                <UserControl x:Name="suppliersUserControl"/>
             </TabItem>
         </TabControl>
 

@@ -24,13 +24,13 @@ namespace LonelyPayment.UserControls
         {
             InitializeComponent();
 
-            salesMasterUserControl.Content = new SalesMasterUserControl();
+            var sale = new { 
+                Started = DateTime.Now.ToShortDateString(), 
+                Customer = "John", 
+                Status = "Active" 
+            };
 
-            salesServantUserControl.Content = new SalesServantUserControl();
-
-
-
-
+            salesListView.Items.Add(sale);
         }
     }
 }

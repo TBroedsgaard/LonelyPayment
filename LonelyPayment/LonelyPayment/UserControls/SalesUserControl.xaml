@@ -7,16 +7,77 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition MinHeight="100" Height="*" />
+            <RowDefinition Height="5" />
             <RowDefinition />
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5" />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <UserControl x:Name="salesMasterUserControl" Grid.Row="0"/>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="salesListView" Grid.Column="0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Started" DisplayMemberBinding="{Binding Started}"/>
+                        <GridViewColumn Header="Customer" DisplayMemberBinding="{Binding Customer}"/>
+                        <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel Grid.Column="1">
+                <Button>
+                    <Image Source="/Images/add.png" />
+                </Button>
+                <Button>
+                    <Image Source="/Images/delete.png" />
+                </Button>
+            </StackPanel>
+        </Grid>
         <GridSplitter Grid.Row="1"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Center"
               Height="5"
         />
-        <UserControl x:Name="salesServantUserControl" Grid.Row="2"/>
+        <StackPanel Grid.Row="2">
+            <Label Content="This is the details area"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Customer"/>
+                <ComboBox x:Name="customerComboBox" Width="100"/>
+                <Label Content="Status"/>
+                <ComboBox Width="80"/>
+            </StackPanel>
+        </StackPanel>
+        <GridSplitter Grid.Row="3"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Center"
+              Height="5"
+        />
+        <StackPanel Grid.Row="4">
+            <Label Content="This is the 'advanced' details"/>
+            <TabControl>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Images/date.png" Height="16" />
+                            <Label Content="Bookings"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <UserControl x:Name="bookingsUserControl"/>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Images/money.png" Height="16"/>
+                            <Label Content="Payments"/>
+                        </StackPanel>
+                    </TabItem.Header>
+                        <UserControl x:Name="paymentsUserControl"/>
+                </TabItem>
+            </TabControl>
+            
+        </StackPanel>
     </Grid>
 </UserControl>
