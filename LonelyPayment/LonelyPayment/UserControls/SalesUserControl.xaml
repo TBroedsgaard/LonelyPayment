@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:UserControls="clr-namespace:LonelyPayment.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -11,7 +12,7 @@
             <RowDefinition Height="5" />
             <RowDefinition />
             <RowDefinition Height="5" />
-            <RowDefinition />
+            <RowDefinition MinHeight="100" Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
@@ -39,7 +40,8 @@
         <GridSplitter Grid.Row="1"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Center"
-              Height="5"
+              Height="5" 
+              Background="#C3C3C3"
         />
         <StackPanel Grid.Row="2">
             <Label Content="This is the details area"/>
@@ -65,7 +67,10 @@
                             <Label Content="Bookings"/>
                         </StackPanel>
                     </TabItem.Header>
-                    <UserControl x:Name="bookingsUserControl"/>
+                    <!--
+                    <UserControl x:Name="saleBookingsUserControl"/>
+                    -->
+                    <UserControls:SaleBookingsUserControl/>
                 </TabItem>
                 <TabItem>
                     <TabItem.Header>
@@ -74,10 +79,12 @@
                             <Label Content="Payments"/>
                         </StackPanel>
                     </TabItem.Header>
-                        <UserControl x:Name="paymentsUserControl"/>
+                    <!--
+                    <UserControl x:Name="salePaymentsUserControl"/>
+                    -->
+                    <UserControls:SalePaymentsUserControl/>
                 </TabItem>
             </TabControl>
-            
         </StackPanel>
     </Grid>
 </UserControl>

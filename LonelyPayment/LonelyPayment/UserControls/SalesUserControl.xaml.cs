@@ -31,6 +31,8 @@ namespace LonelyPayment.UserControls
             };
 
             salesListView.Items.Add(sale);
+
+            //saleBookingsUserControl.Content = new SaleBookingsUserControl();
         }
     }
 }

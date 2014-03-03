@@ -1,7 +1,8 @@
 ﻿<Window x:Class="LonelyPayment.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:UserControls="clr-namespace:LonelyPayment.UserControls"
+        Title="MainWindow" Height="800" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -27,7 +28,7 @@
                         <Label Content="Sales"/>
                     </StackPanel>
                 </TabItem.Header>
-                <UserControl x:Name="salesUserControl"/>
+                <UserControls:SalesUserControl/>
             </TabItem>
             <TabItem>
                 <TabItem.Header>

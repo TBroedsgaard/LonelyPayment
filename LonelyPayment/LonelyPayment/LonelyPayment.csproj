@@ -56,6 +56,12 @@
     <Compile Include="UserControls\CustomersUserControl.xaml.cs">
       <DependentUpon>CustomersUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SaleBookingsUserControl.xaml.cs">
+      <DependentUpon>SaleBookingsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SalePaymentsUserControl.xaml.cs">
+      <DependentUpon>SalePaymentsUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SalesUserControl.xaml.cs">
       <DependentUpon>SalesUserControl.xaml</DependentUpon>
     </Compile>
@@ -78,6 +84,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControls\CustomersUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaleBookingsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SalePaymentsUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
